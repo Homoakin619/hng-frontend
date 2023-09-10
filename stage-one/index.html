@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>My Page</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="content-container">
+        <div class="card">
+          <div class="card-header"></div>
+          <div class="card-body">
+            <img
+              data-testid="slackDisplayImage"
+              class="card-image"
+              src="./pic.jpeg"
+              alt="Ismail Akintunde"
+              srcset=""
+            />
+
+            <div class="content">
+              <div>
+                <p data-testid="slackUserName"><b> Slack Name:</b></p>
+                <p data-testid="slackUserName">Ismail Akintunde</p>
+              </div>
+              <div>
+                <p><b>Current Day of the week:</b></p>
+                <p data-testid="currentDayOfTheWeek" id="day"></p>
+              </div>
+              <div>
+                <p><b>Current UTC Time:</b></p>
+                <p data-testid="currentUTCTime" id="time"></p>
+              </div>
+              <div>
+                <p><b>Track:</b></p>
+                <p data-testid="myTrack">Frontend, Backend</p>
+              </div>
+              <div>
+                <p><b> Github Url:</b></p>
+                <p data-testid="githubURL" id="day"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
