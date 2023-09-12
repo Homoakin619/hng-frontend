@@ -302,3 +302,74 @@ input[type="search"]::placeholder {
   text-align: left;
   color: #6b7280;
 }
+
+
+
+/* Details Page */
+
+.main-container {
+  display: flex;
+  gap: 5%;
+}
+
+
+.sidenav {
+  width: 10%;
+  height: 91vh;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  border: 1px solid tomato;
+  border-radius: 30px;
+}
+
+.menus {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 100px;
+}
+
+.menus div {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  gap: 20px;
+}
+
+.quiz-text {
+  margin-top: 50px;
+  border: 1px solid tomato;
+  padding: 10px;
+  border-radius: 8px;
+  display: block;
+}
+
+.quiz-btn {
+  display: block;
+  color: #be123c;
+  background-color: tomato;
+  border-radius: 30px;
+  padding: 5px 4px;
+  text-align: center;
+}
+
+
+.logout {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+#player {
+  border-radius: 30px;
+  height: 70%;
+}
