@@ -3,32 +3,33 @@
 export default function SideNavbar() {
   return (
     <section className="sidenav">
-        <img src="/assets/icons/logo.svg" alt="" />
+        <img src="/assets/icons/logo1.svg" alt="" />
         <div className="menus">
             <div>
-                <img src="/assets/socials/facebook.svg" alt="" />
-                <span>Home</span>
+                <img className="menu" src="/assets/icons/home.svg" alt="" />
+                <span className="nav-item bold">Home</span>
             </div>
             <div>
-                <img src="/assets/socials/facebook.svg" alt="" />
-                <span>Movies</span>
+                <img className="menu" src="/assets/icons/movies.svg" alt="" />
+                <span className="nav-item bold">Movies</span>
             </div>
             <div>
-                <img src="/assets/socials/facebook.svg" alt="" />
-                <span>TV Series</span>
+                <img className="menu" src="/assets/icons/tv.svg" alt="" />
+                <span className="nav-item bold">TV Series</span>
             </div>
             <div>
-                <img src="/assets/socials/facebook.svg" alt="" />
-                <span>Upcoming</span>
+                <img className="menu" src="/assets/icons/calendar.svg" alt="" />
+                <span className="nav-item bold">Upcoming</span>
             </div>
         </div>
         <div className="quiz-text">
-            <span>play more quizzes and earn free tickets</span>
-            <span className="quiz-btn">Start Playing</span>
+            <h4>play movie quizes and earn <br/> free tickets</h4>
+            <span className="quiz-body medium">50k people are playing now</span>
+            <span className="quiz-btn medium">Start Playing</span>
         </div>
         <div className="logout">
-            <img src="/assets/socials/facebook.svg" alt="" />
-            <span>Log out</span>
+            <img className="menu" src="/assets/icons/logout.svg" alt="" />
+            <span className="nav-item bold" >Log out</span>
         </div>
     </section>
   )

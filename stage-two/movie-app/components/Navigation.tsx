@@ -17,13 +17,13 @@ export default function Navigation() {
             <img src="/assets/icons/search.svg" id="search" role="button" />
           </div>
           <div className="user">
-            <span className="status bold">Sign In</span>
+            <span className="status bolder">Sign In</span>
             <img src="/assets/icons/menu.svg" alt="" />
           </div>
         </div>
         <div className="banner-content-container">
           <div className="banner-content">
-            <span className="banner-title bold">John Wick 3: Parabellum</span>
+            <span className="banner-title bolder">John Wick 3: Parabellum</span>
             <div className="banner-ratings">
               <div>
                 <img src="/assets/icons/imdb.svg" alt="" />
@@ -42,7 +42,7 @@ export default function Navigation() {
             <div>
               <span className="button">
                 <img src="/assets/icons/play.svg" />
-                <span className="banner-button bold" role="button">
+                <span className="banner-button bolder" role="button">
                   Watch Trailer
                 </span>
               </span>
@@ -57,7 +57,6 @@ export default function Navigation() {
           </div>
         </div>
       </section>
-      <script src="/test.js"></script>
     </>
   );
 }
