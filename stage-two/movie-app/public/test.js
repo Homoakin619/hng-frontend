@@ -34,7 +34,6 @@ async function getMovies() {
 let i = 0;
 
  const slider = (array) =>{
-    console.log('Starting Slider');
     if(i < array.length) {
         banner.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://image.tmdb.org/t/p/original${array[i].backdrop_path}')`
         title.innerHTML = array[i].title
@@ -58,19 +57,25 @@ window.addEventListener('load',async () => {
     let movies = await getMovies()
     let moviesArray = movies.data.slice(0,5)
     banner.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://image.tmdb.org/t/p/original${moviesArray[0].backdrop_path}')`;
-    const intVal = setInterval(()=> {
-        const movieCards = document.querySelectorAll('.movie-card');
-        if (movieCards.length) {
-            for (let i = 0; i < movieCards.length; i++) {
-                console.log(movieCards[i]);
-                movieCards[i].addEventListener('click',(event) => {
-                    let id = event.target.id;
-                    window.location.href = `${window.location.origin}/${id}`;
-                })
-            }
-            clearInterval(intVal)
-        } else {console.log('not ready');}
-    },1000)
+    // const intVal = setInterval(()=> {
+    //     const movieCards = document.querySelectorAll('.movie-card');
+    //     const likes = document.querySelectorAll('.like');
+        // if (movieCards.length) {
+        //     for (let i = 0; i < movieCards.length; i++) {
+        //         movieCards[i].addEventListener('click',(event) => {
+        //             let id = event.target.id;
+        //             window.location.href = `${window.location.origin}/${id}`;
+        //         })
+        //     }
+            // for (let i = 0; i < likes.length; i++) {
+            //     likes[i].addEventListener('click',(event) => {
+            //         event.stopPropagation();
+            //     })
+            // }
+            // console.log(likes);
+        //     clearInterval(intVal)
+        // } else {console.log();}
+    // },1000)
     setInterval(() => {slider(moviesArray)},10000);
 
 })

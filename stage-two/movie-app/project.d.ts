@@ -6,6 +6,8 @@ type fetchProps = {
   }
 
 type MovieProp ={
+    adult: boolean
+    runtime: number,
     backdrop_path: string,
     genre_ids: number[],
     genres: any[],

@@ -8,6 +8,7 @@ import { Suspense } from 'react';
 export default async function Home() {
   const movies: Promise<MovieProp[]> =  fetchTopMovies();
   const movieArray = await movies;
+  
   return (
     <>
     <Navigation />
@@ -18,7 +19,7 @@ export default async function Home() {
         <span id='see-more'> <span>See more</span> <img src="/assets/icons/right.svg" alt="" /> </span>
       </div>
       <div className="featured-container">
-      <Suspense fallback={<h3>Loading ...</h3>}>
+      <Suspense fallback={<div className="custom-loader"></div>}>
           <Features user="user" promise={movies} />
         </Suspense>
       </div>
