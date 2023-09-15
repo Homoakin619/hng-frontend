@@ -5,11 +5,11 @@ import { fetchSingleMovie } from "@/util";
 
 type Param = {
   params: {
-    movieid: string;
+    id: string;
   };
 };
 
-export default function MovieDetail({ params: { movieid } }: Param) {
+export default function MovieDetail({ params: { id } }: Param) {
   const [movie, setMovie] = useState<MovieProp | null>(null);
   const [directors,setDirectors] = useState('')
   const [stars,setStars] = useState('')
@@ -25,8 +25,8 @@ export default function MovieDetail({ params: { movieid } }: Param) {
 
   useEffect(() => {
     const fetchMovie = async () => {
-      const url = `https://api.themoviedb.org/3/movie/${movieid}`;
-      const detailUrl = `https://api.themoviedb.org/3/movie/${movieid}/credits?language=en-US`
+      const url = `https://api.themoviedb.org/3/movie/${id}`;
+      const detailUrl = `https://api.themoviedb.org/3/movie/${id}/credits?language=en-US`
       const options = {
         method: "GET",
         headers: {
@@ -80,13 +80,14 @@ export default function MovieDetail({ params: { movieid } }: Param) {
 
           <div className="labels">
             <div className="left-label">
-              <span className="vid-title bold">{movie.title}</span>
+              <span className="vid-title bold" data-testid="movie-title">{movie.title}</span>
               <span className="vid-title bold">•</span>
+              <span className="vid-title bold"  data-testid='movie-release-date' hidden>{movie.release_date}</span>
               <span className="vid-title bold">{new Date(movie.release_date).getFullYear()}</span>
               <span className="vid-title bold">•</span>
               <span className="vid-title bold">{movie.adult ? "PG-18" : "PG-13"  }</span>
               <span className="vid-title bold">•</span>
-              <span className="vid-title bold mr-2">{getRuntime(movie.runtime)}</span>
+              <span className="vid-title bold mr-2" data-testid='movie-runtime'>{getRuntime(movie.runtime)}</span>
               {movie.genres.map((genre) => (
                 <span className="genre-btn medium">{genre.name}</span>
               ))}
@@ -101,7 +102,7 @@ export default function MovieDetail({ params: { movieid } }: Param) {
           </div>
           <div className="details-segment">
             <div className="left-segment">
-              <span className="description">{movie.overview}</span>
+              <span className="description" data-testid='movie-runtime'>{movie.overview}</span>
               <div className="about-section">
                 <p className="about-item">
                   Directors :

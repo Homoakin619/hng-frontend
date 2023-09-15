@@ -23,7 +23,7 @@ export default function MovieCard({
 
   const movieClick = (event: React.MouseEvent<HTMLDivElement>) => {
     const id = (event.target as HTMLDivElement).id;
-    window.location.href = `${window.location.origin}/${id}`;
+    window.location.href = `${window.location.origin}/movies/${id}`;
   };
 
   const handleLike = (event: React.MouseEvent<HTMLDivElement>) => {  
