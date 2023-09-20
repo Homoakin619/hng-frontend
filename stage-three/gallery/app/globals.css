@@ -1,0 +1,60 @@
+.custom-nav {
+  height: 80px;
+}
+
+.gallery-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(20em,1fr));
+  gap: 10px;
+  padding: 0 50px;
+  margin: 40px 0;
+}
+
+.brand {
+  color: rgb(22, 184, 22);
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.btn-primary-custom {
+  background-color: rgb(22, 184, 22);
+  color: #f1f1f1;
+}
+
+.btn-primary-custom:hover {
+  background-color: rgb(17, 154, 17);
+  color: #f1f1f1;
+}
+
+.navbar {
+  border-bottom: 2px solid rgb(79, 185, 79);
+}
+
+.form {
+  min-width: 300px;
+}
+
+.is-over {
+  /* scale: 1.05; */
+  border: 3px solid green;
+  /* background: #BDBDBD;  */
+	/* border: solid #BDBDBD 1px;  */
+	opacity: 0.6; 
+}
+
+.on-drop{
+  border: 2px solid blue;
+}
+
+.image-card {
+  cursor: grab;
+  width: 50%;
+  /* Add other styling as needed */
+}
+
+.gallery-image {
+  /* max-width: 450px; */
+  width: 100%;
+  height: auto;
+  cursor: grab;
+}
