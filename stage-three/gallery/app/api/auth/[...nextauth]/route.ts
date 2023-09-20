@@ -29,12 +29,7 @@ const AuthHandler = NextAuth({
               email: credentials?.email,
               password: credentials?.password,
             };
-            console.log(BASE_URL);
-            
-            console.log('logging credentials');
-            
-            console.log(credentialsObject);
-            
+
             const res = await fetch(`${BASE_URL}/api/auth/login`, {
               method: "POST",
               body: JSON.stringify(credentialsObject),
