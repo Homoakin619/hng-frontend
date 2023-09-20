@@ -10,7 +10,7 @@ export const POST = async (req: any) => {
     
    try {
         await connectDb();
-        const userExists = await User.findOne({email: data.email});
+        const userExists = await User.findOne({email: datas.email});
         if (!userExists) {
             return NextResponse.json({message:"Invalid Credentials"},{status:400});
         }else {
