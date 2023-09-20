@@ -1,33 +1,32 @@
 import { connectDb } from "@/database";
 import User from "@/models/User";
 import { NextResponse } from "next/server";
+import jwt from "jsonwebtoken";
 
 
 
 export const POST = async (req: any) => {
-    const data = await req.json();
+    const datas = await req.json();
     
    try {
         await connectDb();
-        const userExists = await User.findOne({email: data.email})
-        if (userExists) {
-            if(!userExists || !userExists.matchPassword(data.password)) {
-                console.log('failed login');
-                
-                return NextResponse.json({message: "Error Validating User"})
-            } else {        
-                console.log('success login');
-                
-                const token = userExists.generateToken();
-                const datas = {
-                    ...userExists.toJSON(),token
-                }
-                return NextResponse.json({...datas},{status:200})
-            }
+        const userExists = await User.findOne({email: data.email});
+        if (!userExists) {
+            return NextResponse.json({message:"Invalid Credentials"},{status:400});
         }else {
-            console.log('no user');
-            return NextResponse.json({message: "User does not exist"},{status:400})
-        }       
+            if(bcrypt.compareSync(datas.password,userExists.password_hash)) {
+                const token = jwt.sign({sub:userExists._id},""+ process.env.JWT_SECRET,{expiresIn: "7d"});
+                const data  = {
+                    email: datas.email,
+                    token: token,
+                    user_id: userExists._id.toString(),
+                }
+                return NextResponse.json(data,{status: 200})
+            } else {
+                return NextResponse.json({message:"Invalid Credentials"},{status:400});
+            }
+           
+        } 
        
    } catch (error) {
        console.log(error);

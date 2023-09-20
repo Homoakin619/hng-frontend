@@ -43,9 +43,7 @@ const AuthHandler = NextAuth({
                 "Content-Type": "application/json",
               },
             });
-            const user = await res.json();
-            console.log('route msg');
-            
+            const user = await res.json();            
             console.log(user);
             
             if (res.ok && user) {
