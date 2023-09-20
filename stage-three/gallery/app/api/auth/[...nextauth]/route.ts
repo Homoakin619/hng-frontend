@@ -3,7 +3,6 @@ import NextAuth from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials"
 
 const BASE_URL = process.env.NEXTAUTH_URL
-// console.log(BASE_URL);
 
 
 const AuthHandler = NextAuth({
