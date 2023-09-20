@@ -1,6 +1,5 @@
 import "./bootstrap.min.css";
-// import '../public/static/css/popup.css'
-// import '../public/static/css/slider.css'
+import 'react-toastify/dist/ReactToastify.css';
 import "../public/static/css/style.css";
 import "./globals.css";
 import type { Metadata } from "next";
@@ -26,10 +25,7 @@ export default function RootLayout({
           
           <main className="content-container">{children}</main>
         </Provider>
-        {/* <script src="/static/js/tether.min.js"></script>
-        <script src="/static/js/bootstrap.min.js"></script>            
-        <script src="/static/js/hero-slider-main.js"></script>
-        <script src="/static/js/jquery.magnific-popup.min.js"></script> */}
+        <script src="/static/js/bootstrap.bundle.min.js"></script>
       </body>
     </html>
   );

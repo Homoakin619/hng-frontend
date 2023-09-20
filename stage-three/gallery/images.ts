@@ -1,128 +1,133 @@
 export const images = [
     {
-        id: 1,
-        category: "outdoor",
-        src: '/static/img/tm-img-02.jpg'
+        id: 16,
+        tag: "nature",
+        src: '/static/img/tm-img-16.jpg'
     },
     {
         id: 2,
-        category: "outdoor",
+        tag: "outdoor",
         src: '/static/img/tm-img-02.jpg'
     },
     {
         id: 3,
-        category: "outdoor",
+        tag: "outdoor",
         src: '/static/img/tm-img-03.jpg'
     },
     {
         id: 4,
-        category: "outdoor",
+        tag: "nature",
         src: '/static/img/tm-img-04.jpg'
     },
      
     {
         id: 5,
-        category: "outdoor",
-        src: '/static/img/tm-img-03.jpg'
+        tag: "indoor",
+        src: '/static/img/tm-img-05.jpg'
     },
     {
         id: 6,
-        category: "flex",
-        src: '/static/img/tm-img-02.jpg'
+        tag: "nature",
+        src: '/static/img/tm-img-06.jpg'
     },
     {
         id: 7,
-        category: "outdoor",
-        src: '/static/img/tm-img-03.jpg'
+        tag: "outdoor",
+        src: '/static/img/tm-img-07.jpg'
     },
     {
         id: 8,
-        category: "indoor",
-        src: '/static/img/tm-img-04.jpg'
+        tag: "indoor",
+        src: '/static/img/tm-img-08.jpg'
     },
     {
         id: 9,
-        category: "indoor",
-        src: '/static/img/tm-img-04.jpg'
+        tag: "nature",
+        src: '/static/img/tm-img-09.jpg'
     },
     {
         id: 10,
-        category: "outdoor",
-        src: '/static/img/tm-img-02.jpg'
+        tag: "nature",
+        src: '/static/img/tm-img-10.jpg'
     },
     {
         id: 11,
-        category: "outdoor",
-        src: '/static/img/tm-img-03.jpg'
+        tag: "outdoor",
+        src: '/static/img/tm-img-11.jpg'
     },
     {
         id: 12,
-        category: "outdoor",
-        src: '/static/img/tm-img-04.jpg'
+        tag: "outdoor",
+        src: '/static/img/tm-img-12.jpg'
     },
     {
         id: 13,
-        category: "outdoor",
-        src: '/static/img/tm-img-02.jpg'
+        tag: "outdoor",
+        src: '/static/img/tm-img-13.jpg'
     },
     {
         id: 14,
-        category: "outdoor",
-        src: '/static/img/tm-img-03.jpg'
+        tag: "outdoor",
+        src: '/static/img/tm-img-14.jpg'
     },
     {
         id: 15,
-        category: "outdoor",
-        src: '/static/img/tm-img-04.jpg'
+        tag: "outdoor",
+        src: '/static/img/tm-img-15.jpg'
     },
     {
         id: 16,
-        category: "outdoor",
-        src: '/static/img/tm-img-02.jpg'
+        tag: "nature",
+        src: '/static/img/tm-img-16.jpg'
     },
     {
         id: 17,
-        category: "outdoor",
+        tag: "outdoor",
         src: '/static/img/tm-img-03.jpg'
     },
     {
         id: 18,
-        category: "outdoor",
+        tag: "outdoor",
         src: '/static/img/tm-img-04.jpg'
     },
     {
         id: 19,
-        category: "outdoor",
+        tag: "outdoor",
         src: '/static/img/tm-img-02.jpg'
     },
     {
         id: 20,
-        category: "outdoor",
-        src: '/static/img/tm-img-03.jpg'
+        tag: "outdoor",
+        src: '/static/img/tm-img-15.jpg'
     },
     {
         id: 21,
-        category: "outdoor",
-        src: '/static/img/tm-img-04.jpg'
+        tag: "outdoor",
+        src: '/static/img/tm-img-14.jpg'
     },
     {
         id: 22,
-        category: "outdoor",
-        src: '/static/img/tm-img-02.jpg'
+        tag: "outdoor",
+        src: '/static/img/tm-img-12.jpg'
     },
     {
         id: 23,
-        category: "outdoor",
-        src: '/static/img/tm-img-03.jpg'
+        tag: "outdoor",
+        src: '/static/img/tm-img-07.jpg'
     },
     {
         id: 24,
-        category: "outdoor",
-        src: '/static/img/tm-img-04.jpg'
+        tag: "outdoor",
+        src: '/static/img/tm-img-13.jpg'
+    },
+    {
+        id: 25,
+        tag: "outdoor",
+        src: '/static/img/tm-img-14.jpg'
+    },
+    {
+        id: 26,
+        tag: "outdoor",
+        src: '/static/img/tm-img-15.jpg'
     },
 ]
-
-export async function getImages () {
-
-    return images
-}

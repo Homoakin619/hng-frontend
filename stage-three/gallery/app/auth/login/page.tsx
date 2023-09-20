@@ -12,10 +12,6 @@ type AuthType = {
 const LoginPage = () => {
     const params = useSearchParams();
     const callbackUrl = params.get("callbackUrl") ?? "/";
-    // const [formError, setFormError] = useState("");
-    // const [success, setSuccess] = useState("");
-    // const { data: session } = useSession();
-  
   
   
     const handleLogin: FormEventHandler<HTMLFormElement> = async (event: FormEvent<HTMLFormElement>) => {
@@ -56,7 +52,6 @@ const LoginPage = () => {
           });
         }   
       } else {
-        // setFormError("Invalid credentials");
         toast("Error Occured", {
           type: "error",
           theme: "colored",
@@ -72,7 +67,7 @@ const LoginPage = () => {
           className="d-flex align-items-center justify-content-center"
           style={{ height: "80vh" }}
         >
-          <div className="col-3">
+          <div className="col-md-3">
             <div className="col">
               <h3>Login</h3>
             </div>

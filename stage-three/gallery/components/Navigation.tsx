@@ -42,7 +42,7 @@ export default function Navigation({handler}: any) {
                 </li>
                 <li className="nav-item">
                   <button
-                    className="nav-link btn btn-danger"
+                    className="btn btn-danger"
                     aria-current="page"
                     onClick={() => {
                       signOut({ callbackUrl: "/auth/login" });
