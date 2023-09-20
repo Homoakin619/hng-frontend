@@ -4,7 +4,6 @@ import CredentialsProvider from "next-auth/providers/credentials"
 
 const BASE_URL = process.env.NEXTAUTH_URL
 
-
 const AuthHandler = NextAuth({
     providers: [
         CredentialsProvider({
@@ -44,8 +43,7 @@ const AuthHandler = NextAuth({
               },
             });
             const user = await res.json();            
-            console.log(user);
-            
+                        
             if (res.ok && user) {
               return user;
             } else {

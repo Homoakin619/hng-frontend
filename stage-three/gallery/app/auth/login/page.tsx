@@ -29,22 +29,18 @@ const LoginPage = () => {
       });
   
       if (res?.ok) {
-        console.log('my nigga');
-        console.log(res);
         
         if (res.url){
-          console.log('pass');
-          
+                    
           toast("Login Succesful", {
             theme: "colored",
             type: "success",
           });
-          console.log(callbackUrl);
-          
+                    
           setTimeout(() => {window.location.href = callbackUrl} ,3000)
          
         }else {
-          console.log("ello dere");
+          
           toast("Invalid credentials", {
             type: "error",
             theme: "colored",

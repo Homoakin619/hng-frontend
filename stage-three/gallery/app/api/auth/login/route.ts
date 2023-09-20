@@ -12,10 +12,11 @@ export const POST = async (req: any) => {
    try {
         await connectDb();
         const userExists = await User.findOne({email: datas.email});
+        
         if (!userExists) {
             return NextResponse.json({message:"Invalid Credentials"},{status:400});
         }else {
-            if(bcrypt.compareSync(datas.password,userExists.password_hash)) {
+            if(bcrypt.compareSync(datas.password,userExists.password)) {
                 const token = jwt.sign({sub:userExists._id},""+ process.env.JWT_SECRET,{expiresIn: "7d"});
                 const data  = {
                     email: datas.email,
@@ -26,11 +27,10 @@ export const POST = async (req: any) => {
             } else {
                 return NextResponse.json({message:"Invalid Credentials"},{status:400});
             }
-           
         } 
        
    } catch (error) {
-       console.log(error);
+       
        return new Response("Failed to Validate User",{status: 500})
    }
 };
