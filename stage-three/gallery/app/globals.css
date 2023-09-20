@@ -17,13 +17,13 @@
 }
 
 .btn-primary-custom {
-  background-color: rgb(22, 184, 22);
-  color: #f1f1f1;
+  background-color: rgb(22, 184, 22) !important;
+  color: #f1f1f1 !important;
 }
 
 .btn-primary-custom:hover {
-  background-color: rgb(17, 154, 17);
-  color: #f1f1f1;
+  background-color: rgb(17, 154, 17) !important;
+  color: #f1f1f1 !important;
 }
 
 .navbar {
@@ -35,10 +35,7 @@
 }
 
 .is-over {
-  /* scale: 1.05; */
   border: 3px solid green;
-  /* background: #BDBDBD;  */
-	/* border: solid #BDBDBD 1px;  */
 	opacity: 0.6; 
 }
 
@@ -49,11 +46,9 @@
 .image-card {
   cursor: grab;
   width: 50%;
-  /* Add other styling as needed */
 }
 
 .gallery-image {
-  /* max-width: 450px; */
   width: 100%;
   height: auto;
   cursor: grab;

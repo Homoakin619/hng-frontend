@@ -63,6 +63,9 @@ const LoginPage = () => {
     return (
       <>
         <ToastContainer />
+        <div className="container-fluid mt-4 ms-3">
+        <h2 className="brand">IMAGE GALLERY</h2>
+        </div>
         <div
           className="d-flex align-items-center justify-content-center"
           style={{ height: "80vh" }}
