@@ -29,9 +29,11 @@ const LoginPage = () => {
       });
   
       if (res?.ok) {
+        console.log("good req");
+        console.log(res);
         
         if (res.url){
-                    
+          console.log("good req");
           toast("Login Succesful", {
             theme: "colored",
             type: "success",

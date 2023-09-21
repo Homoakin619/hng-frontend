@@ -40,8 +40,12 @@ const AuthHandler = NextAuth({
             const user = await res.json();            
                         
             if (res.ok && user) {
+              console.log('user returned');
+              
               return user;
             } else {
+              console.log('failed user');
+              
               return null;
             }
           },
@@ -76,7 +80,6 @@ const AuthHandler = NextAuth({
           token: any;
           user: any;
         }) {
-          
           
           session.user = {
             email: token.email,
