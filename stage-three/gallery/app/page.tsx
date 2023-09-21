@@ -3,7 +3,7 @@ import Loader from "@/components/Loader";
 import { images } from "@/images";
 import ImageCard from "@/components/ImageCard";
 
-import { DragEvent, KeyboardEvent, useEffect, useState } from "react";
+import { DragEvent, KeyboardEvent, TouchEvent, useEffect, useState } from "react";
 import Navigation from "@/components/Navigation";
 
 
@@ -35,6 +35,7 @@ export default function Home() {
 
   }
 
+
   const handleDrag = (event: DragEvent<HTMLDivElement>) => {
     event.stopPropagation()
     let element = event.currentTarget as HTMLDivElement;
@@ -42,15 +43,14 @@ export default function Home() {
     setDragId(id);
   };
 
+
   const handleDrop = (event: DragEvent) => {
-    event.stopPropagation()
     const element = event.currentTarget as HTMLDivElement;
     const sourcePos = imageList.find((image) => "" + image.id === dragId);
     const targetPos = imageList.find(
       (image) => "" + image.id === element.id
     );
     
-
     const updatedImages = [...imageList];
     const [movedImage] = updatedImages.splice(sourcePos?.id as number, 1);
     updatedImages.splice(targetPos?.id as number, 0, movedImage);
@@ -58,6 +58,7 @@ export default function Home() {
     element.classList.remove("is-over");
     setImageList(updatedImages);
   };
+
 
   const handleEnter = (event: DragEvent<HTMLDivElement>) => {
     let element = event.target as HTMLDivElement;
@@ -75,6 +76,7 @@ export default function Home() {
     
   };
 
+  
   const handleLeave = (event: DragEvent<HTMLDivElement>) => {
     let element = event.target as HTMLDivElement;
     if (element.tagName !== "div") {

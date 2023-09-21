@@ -1,4 +1,4 @@
-This is a gallery project built with  Next Js. The live link to the project is at [Gallery](https://https://hng-frontend-rho.vercel.app/)
+This is a gallery project built with  Next Js. The live link to the project is at [Gallery](https://gallery-lyart.vercel.app/)
 ## Getting Started
 
 To run the project locally on your machine:
