@@ -1,0 +1,23 @@
+{
+    "name": "Video recorder",
+    "description": " ",
+    "version": "1.0",
+    "manifest_version":3,
+    "background": {
+        "service_worker": "background.js"
+        },
+    "icons": {
+        "48": "public/assets/images/logo.png"
+        },
+    
+    "action": {
+        "default_popup": "./views/extension_modal.html",
+        "default_icon": {
+            "32": "public/assets/images/ext-icon.png",
+            "48": "public/assets/images/logo.png"
+        }
+   
+    }
+    
+        
+}

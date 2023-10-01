@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Screen Recording</title>
+    <link rel="stylesheet" href="../public/assets/css/style.css" />
+  </head>
+  <body>
+    <!-- <video id="video" autoplay></video> -->
+    <section class="recorder-container">
+      <img id="avatar" src="../public/assets/icons/avatar.svg" alt="avatar" />
+      <div class="recorder-board">
+        <span class="timer white">00:03:45</span>
+        <img
+          id="rec"
+          class="mr-3"
+          src="../public/assets/icons/rec-dot.svg"
+          alt="rec"
+        />
+        <div class="recording-buttons">
+          <div class="button-box">
+            <div class="custom-button-container" role="button" id="start">
+              <img src="../public/assets/icons/pause-btn.svg" alt="rec" />
+            </div>
+            <span class="white">Pause</span>
+          </div>
+          <div class="button-box">
+            <div class="custom-button-container" role="button" id="stop">
+              <img src="../public/assets/icons/stop.svg" alt="rec" />
+            </div>
+            <span class="white">Stop</span>
+          </div>
+          <div class="button-box">
+            <div class="custom-button-container" role="button" id="">
+              <img src="../public/assets/icons/camera.svg" alt="rec" />
+            </div>
+            <span class="white">Camera</span>
+            <img class="more" src="../public/assets/icons/more.svg" alt="rec" />
+          </div>
+          <div class="button-box">
+            <div class="custom-button-container" role="button" id="">
+              <img src="../public/assets/icons/mic.svg" alt="rec" />
+            </div>
+            <span class="white">Mic</span>
+            <img class="more" src="../public/assets/icons/more.svg" alt="rec" />
+          </div>
+          <div class="button-container mb-auto">
+            <img src="../public/assets/icons/trash_btn.svg" alt="rec" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="inputdevices"></div>
+    <!-- <script src="../public/assets/js/popup.js"></script> -->
+    <script>
+      const videoElem = document.getElementById("video");
+      const startElem = document.getElementById("start");
+      const stopElem = document.getElementById("stop");
+      let chunks = [];
+      let mediaRecorder;
+      const displayMediaOptions = {
+        video: {
+          displaySurface: "window",
+        },
+        audio: true,
+      };
+      const recordingOptions = {
+        video: {
+          displaySurface: "window",
+        },
+        audio: {
+          echoCancellation: true,
+          noiseSuppression: false,
+          sampleRate: 44100,
+          suppressLocalAudioPlayback: false,
+        },
+        surfaceSwitching: "include",
+        selfBrowserSurface: "exclude",
+        systemAudio: "include",
+      };
+
+      async function startCapture() {
+        try {
+ 
+          const stream = await navigator.mediaDevices.getDisplayMedia(
+            displayMediaOptions
+          );
+          videoElem.srcObject = stream;
+          const options = { mimeType: "video/webm; codecs=vp8" };
+          mediaRecorder = new MediaRecorder(stream, options);
+          mediaRecorder.start();
+
+          mediaRecorder.addEventListener("stop", async (event) => {
+            
+            videoElem.setAttribute("controls", "");
+            videoElem.controls = true;
+            const videoBlob = new Blob(chunks, {
+              type: 'video/webm; codecs="vp8, vorbis"',
+            });
+            const req = await fetch('/api/media',{
+                method: 'POST',
+                body: videoBlob,
+                headers: {
+                    // "Content-Type"
+                }
+            })
+            console.log(req.json());
+            const videoUrl = URL.createObjectURL(videoBlob);
+            console.log(videoUrl);
+            videoElem.src = videoUrl;
+            console.log("Recording Stopped");
+          });
+
+          mediaRecorder.ondataavailable = (event) => {
+            console.log("data available");
+            chunks.push(event.data);
+          };
+        } catch (err) {
+          console.error(err);
+        }
+      }
+
+      function stopCapture(evt) {
+        let tracks = videoElem.srcObject.getTracks();
+
+        tracks.forEach((track) => track.stop());
+        videoElem.srcObject = null;
+      }
+
+      startElem.addEventListener(
+        "click",
+        (evt) => {
+          startCapture();
+        },
+        false
+      );
+
+      stopElem.addEventListener(
+        "click",
+        (evt) => {
+          stopCapture();
+          mediaRecorder.stop();
+        },
+        false
+      );
+
+      //   navigator.mediaDevices.enumerateDevices().then((devices) => {
+    //     devices.forEach((device) => {
+    //         console.log(device.kind);
+    //       const menu = document.getElementById("inputdevices");
+    //       if (device.kind === "audioinput") {
+    //         const item = document.createElement("option");
+    //         item.textContent = device.label;
+    //         item.value = device.deviceId;
+    //         menu.appendChild(item);
+    //       }
+    //     });
+    //   });
+
+    // TODO: FIX AUDIO SOUND
+    </script>
+  </body>
+</html>
+
+
+
