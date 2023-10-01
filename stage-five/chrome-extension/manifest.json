@@ -1,0 +1,36 @@
+{
+    "name": "Video recorder",
+    "description": " ",
+    "version": "1.0",
+    "manifest_version":3,
+    "background": {
+        "service_worker": "background.js"
+        },
+    "icons": {
+        "48": "public/assets/images/logo.png"
+        },
+    "permissions": [
+        "activeTab", "scripting"
+    ],
+    "content_scripts": [
+        {"matches" : ["<all_urls>"],
+        "css": ["public/assets/css/style.css"],
+        "js": ["public/assets/js/scripts.js"]
+        }
+      ],
+    "web_accessible_resources": [
+        {
+          "resources": [ "/public/*"],
+          "matches": [ "<all_urls>" ]
+        }
+      ],
+    "action": {
+        "default_icon": {
+            "32": "public/assets/images/ext-icon.png",
+            "48": "public/assets/images/logo.png"
+        }
+   
+    }
+    
+        
+}

@@ -13,7 +13,6 @@ export const POST = async (req: NextRequest, response: NextResponse) => {
             const user = new User({...body});
             await user.save();
             const token = user.generateToken();
-            console.log(token);
             
             return NextResponse.json({user},{status: 201})
         }

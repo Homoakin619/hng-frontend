@@ -1,0 +1,156 @@
+:::WEB eXTENSION STORE:::
+LOGO
+width: 80px
+height: 80px
+
+EXTENSION TITLE
+font-family: Sora;
+font-size: 48px;
+font-weight: 600;
+line-height: 60px;
+letter-spacing: 0em;
+text-align: left;
+
+FEATURED textfont-family: Work Sans;
+font-size: 20px;
+font-weight: 500;
+line-height: 23px;
+letter-spacing: 0em;
+text-align: center;
+
+BOTTOM TEXTS
+font-family: Work Sans;
+font-size: 20px;
+font-weight: 500;
+line-height: 23px;
+letter-spacing: 0em;
+text-align: center;
+
+BLUE COLOR: 
+background: rgba(14, 117, 197, 1);
+
+
+USERS COUNT 
+background: rgba(96, 96, 96, 1);
+
+
+::NAVIGATIONS::
+NAV-ITEM
+font-family: Work Sans;
+font-size: 20px;
+font-weight: 500;
+line-height: 23px;
+letter-spacing: 0em;
+text-align: center;
+background: rgba(96, 96, 96, 1);
+
+ACTIVE-ITEM
+width: Hug (122px)
+height: Hug (47px)
+padding: 12px, 16px, 12px, 16px
+border-radius: 24px
+gap: 10px
+box-shadow: 4px 4px 40px 0px rgba(20, 20, 20, 0.1);
+
+MODAL STYLE
+width: Hug (300px)
+height: Hug (439px)
+top: 150px
+left: 1076px
+padding: 24px, 24px, 32px, 24px
+border-radius: 24px
+gap: 32px
+
+MODAL HEADING TEXTS
+font-family: Sora;
+font-size: 16px;
+font-weight: 700;
+line-height: 20px;
+letter-spacing: 0em;
+text-align: left;
+
+//styleName: Typography/Header/H6;
+font-family: Sora;
+font-size: 16px;
+font-weight: 700;
+line-height: 20px;
+letter-spacing: 0em;
+text-align: left;
+
+
+
+
+
+
+:::BOTTOM DISPLAY:::
+ICON
+width: 132px
+height: 132px
+
+TITLE:
+font-family: Sora;
+font-size: 48px;
+font-weight: 600;
+line-height: 60px;
+letter-spacing: 0em;
+text-align: left;
+
+DESCRIPTION
+font-family: Sora;
+font-size: 24px;
+font-weight: 400;
+line-height: 30px;
+letter-spacing: 0em;
+text-align: center;
+
+
+
+
+
+Record Screen Board
+width: Hug (567px)
+height: Hug (102px)
+padding: 8px
+border-radius: 200px
+gap: 8px
+border-color: background: rgba(98, 98, 98, 0.17);
+
+Recording Container
+background-color: background: rgba(20, 20, 20, 1);
+width: Hug (551px)
+height: Hug (86px)
+padding: 12px, 40px, 12px, 16px
+border-radius: 200px
+gap: 8px
+
+TIMER
+font-family: Inter;
+font-size: 20px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: left;
+
+CONTROLLER BUTTON background
+width: Hug (44px)
+height: Hug (44px)
+padding: 10px
+border-radius: 32px
+border: 1px
+gap: 10px
+
+
+DELETE BACKGROUND 
+background: linear-gradient(0deg, #000000, #000000),
+linear-gradient(0deg, #4B4B4B, #4B4B4B);
+background: rgba(75, 75, 75, 1)
+
+
+
+Avatar:
+width: Hug (160px)
+height: Hug (160px)
+padding: 2px
+border-radius: 164px
+gap: 2px
+border- color: rgba(232, 232, 232, 1)
