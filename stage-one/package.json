@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "parcel build index.html"
+    "build": "node init && parcel build index.html"
   },
   "author": "",
   "license": "ISC",
